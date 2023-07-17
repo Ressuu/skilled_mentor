@@ -103,10 +103,11 @@ body {
 }
 
 .main_right img[alt="PC_image"] {
+  max-width: 100%;
   width: 60%;
   position: absolute;
-  bottom: 4rem;
-  left: 50rem;
+  bottom: 25%;
+  left: 50%;
   z-index: -1;
 }
 
@@ -162,13 +163,126 @@ body {
 
 /* MAIN CONTNET  */
 
-.main_content {
+.row {
+  flex-direction: row;
   display: flex;
+  flex-flow: row wrap;
   flex-wrap: wrap;
+  gap: 30px;
+}
+
+.box_color {
+  margin: auto;
+  border-radius: 15px;
+  width: 350px;
+  height: 322px;
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+
+.box_color h2 {
+  font-family: Plus Jakarta Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  color: white;
+  padding: 2rem;
 }
 
 .box {
-  flex: 1;
-  flex-basis: 33%;
-  margin: 10px;
+  margin: auto;
+  border-radius: 15px;
+  width: 350px;
+  height: 322px;
+  background: #ffff;
+  margin-bottom: 80px;
+  box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+}
+
+.logo {
+  margin-left: 32px;
+}
+
+.title h3 {
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  color: #13183f;
+}
+
+.text p {
+  width: 286px;
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: #83869a;
+}
+
+.box span {
+  color: #f74780;
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+/* FOOTER  */
+
+.footer {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  background: #13183f;
+  align-items: center;
+  margin-top: 140px;
+}
+
+.footer img {
+  margin-left: 165px;
+  width: 111.168px;
+  height: 27.684px;
+}
+
+.footer p {
+  cursor: pointer;
+  padding: 14px 31px 14px 31px;
+  margin-right: 165px;
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: #fff;
+  border-radius: 28px;
+  transition: 0.5s ease;
+  background: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+}
+
+.footer p:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+}
+
+@media (max-width: 769px) {
+  .footer {
+    width: 99%;
+  }
+
+  .footer img {
+    margin: 0 0 0 16px;
+  }
+
+  .footer p {
+    margin: 0 16px 0 0;
+  }
 }
